@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme{
+    --animate-menudown: menu_down 0.3s ease-out;
+
+    @keyframes menu_down{
+        0%{
+            transform:translateY(-300px);
+            opacity: 0.5;
+        }
+        100%{
+            transform:transalteY(0px);
+            opacity: 1;
+        }
+    }
+
+    --animate-menuup: menu_up 0.3s linear;
+
+    @keyframes menu_up{
+        0%{
+            transform:translateY(0px);
+        }
+        100%{
+            transform:translateY(-300px);
+        }
+    }
+
+    --animate-list: list_animation .24s ease-out;
+    @keyframes list_animation {
+     
+        0%{
+            transform:translateY(-8px);
+            opacity:0.5;
+        }
+        100%{
+            transform:translateY(0px);
+            opacity:1;
+        }
+    }
+
+    --animate-list: list_animation2  ease-out;
+    @keyframes list_animation2 {
+     
+        0%{
+            transform:translateY(-8px);
+            opacity:0.5;
+        }
+        100%{
+            transform:translateY(0px);
+            opacity:1;
+        }
+    }
+
+    --animate-mobilemenudown: mobile_menu 0.3s ease-out;
+
+    @keyframes mobile_menu{
+        0%{
+            transform:translateY(-600px);
+            opacity: 0.5;
+        }
+        100%{
+            transform:translateY(0px);
+            opacity: 1;
+        }
+    }
+    
+    --animate-mobilemenuup: mobilemenu_up 0.3s linear;
+
+    @keyframes mobilemenu_up{
+        0%{
+            transform:translateY(0px);
+        }
+        100%{
+            transform:translateY(-600px);
+        }
+    }
+
+    --animate-slideleftoptions:slideleftoptions 0.5s ease-out;
+    @keyframes slideleftoptions{
+        0%{
+            transform:translateX(-10px);
+            opacity: 0;
+        }
+        100%{
+            transform:translateY(0px);
+            opacity: 1;
+        }
+    }
+}
+
+@layer components {
+    .body-no-scroll {
+      @apply overflow-hidden;
+    }
+    .footer br{
+        margin: 5px 0;
+    }
+  }
